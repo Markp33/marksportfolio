@@ -4,8 +4,8 @@ import { navItems } from "@/data/navItems";
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50">
-      <nav className="max-w-6xl mx-auto px-4 py-3">
-        <ul className="flex gap-6 font-semibold text-gray-800">
+      <nav className=" max-w-6xl mx-auto px-4 py-3">
+        <ul className="flex justify-center gap-6 text-gray-800">
           {navItems.map((item) => (
             <li key={item.to}>
               <Link

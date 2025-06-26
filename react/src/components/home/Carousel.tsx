@@ -9,7 +9,7 @@ export default function Carousel() {
   const trackRef = useRef<HTMLDivElement>(null);
 
   const totalSlides = slides.length;
-  const extendedSlides = [...slides, ...slides]; // duplicate for looping
+  const extendedSlides = [...slides, ...slides];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +25,7 @@ export default function Carousel() {
       const timeout = setTimeout(() => {
         setTransitioning(false);
         setIndex(0);
-      }, 700); // match transition time
+      }, 700);
       return () => clearTimeout(timeout);
     }
   }, [index]);
@@ -49,7 +49,7 @@ export default function Carousel() {
             >
 
             <div
-              className={`h-full w-full rounded-xl flex items-center justify-center text-white text-2xl font-bold ${slide.color}`}
+              className={`h-full w-full rounded-xl flex items-center justify-center text-white text-2xl font-bold hover:bg-gray-400  ${slide.color}`}
             >
               {slide.text}
             </div>
