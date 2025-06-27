@@ -1,9 +1,8 @@
-
 import Carousel from "@/components/home/Carousel";
 
 export default function App() {
   return (
-    <div className="min-h-screen px-6 py-20 bg-beige">
+    <div className="min-h-screen px-6 bg-beige">
     <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col items-center justify-center px-4 md:flex-row md:justify-between md:px-20">
       <div className="max-w-xl text-center md:text-left space-y-6">
         <p className="text-xl font-medium">Hey, I'm Mark <span className="inline-block">👋</span></p>
@@ -30,7 +29,7 @@ export default function App() {
           <img
             src="../public/img/me.jpg"
             alt="mrk"
-            className="w-full h-full object-cover rounded-full"
+            className="w-full h-full object-cover rounded-full drag-none"
           />
         </div>
       </div>
