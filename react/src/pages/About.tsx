@@ -131,9 +131,9 @@ export default function About() {
               className="pl-3 text-lg text-gray-600 
                     before:content-[''] before:left-0 before:h-full before:bg-purple-600 before:w-1 before:absolute before:top-0 relative before:rounded-full"
             >
-              I'm a passionate web development student who enjoys creating
-              beautiful, fast, and user-friendly websites. I’m always learning
-              and love taking on new challenges that push me to grow as a
+              I am a passionate web development student who enjoys creating
+              proffesional, fast, and user-friendly websites. I am always open to learn
+              and take on new challenges that push me to grow as a
               developer.
             </p>
           </div>
@@ -147,8 +147,8 @@ export default function About() {
           My Story<span className="text-purple-600">.</span>
         </h2>
         <p className="text-lg text-gray-700 mb-6">
-          My coding journey started when I discovered how websites are built. It
-          sparked a passion in me, and since then I’ve been diving deeper into
+          My coding journey started when I discovered the beauty behind software development. It
+          sparked a passion in me, and since then I have been diving deeper into
           front-end technologies like{" "}
           <span className="text-purple-600">HTML</span>,{" "}
           <span className="text-purple-600">CSS</span>,{" "}
@@ -162,11 +162,11 @@ export default function About() {
           <span className="text-purple-600">Socket.IO</span>.
         </p>
         <p className="text-lg text-gray-700 mb-6">
-          I also enjoy learning new tools and frameworks, like{" "}
+          I also enjoy learning new tools and frameworks, such as{" "}
           <span className="text-purple-600">Tailwind CSS</span>,{" "}
-          <span className="text-purple-600">Vite</span>, and{" "}
-          <span className="text-purple-600">Headless WordPress</span>, and I
-          love experimenting with animations and APIs.
+          <span className="text-purple-600">Vite</span>, as well as{" "}
+          <span className="text-purple-600">Headless WordPress</span>, furthermore I
+          enjoy experimenting with animations and APIs.
         </p>
         <p className="text-lg text-gray-700">
           I'm always open to feedback and collaboration and excited to continue
