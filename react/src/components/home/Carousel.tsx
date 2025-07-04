@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { slides } from "./carouselData";
+import { projects } from "@/data/projects";
+import { Link } from "react-router-dom";
+
 
 const visibleSlides = 3;
 
@@ -8,8 +10,8 @@ export default function Carousel() {
   const [transitioning, setTransitioning] = useState(true);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const totalSlides = slides.length;
-  const extendedSlides = [...slides, ...slides];
+  const totalSlides = projects.length;
+  const extendedSlides = [...projects, ...projects];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,7 +33,7 @@ export default function Carousel() {
   }, [index]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto overflow-hidden py-6">
+    <div className="w-full max-w-6xl mx-auto overflow-hidden py-6">
       <div
         ref={trackRef}
         className="flex"
@@ -41,20 +43,53 @@ export default function Carousel() {
           transition: transitioning ? "transform 0.7s ease-in-out" : "none",
         }}
       >
-        {extendedSlides.map((slide, i) => (
+        {extendedSlides.map((project, i) => {
+          const videoRef = useRef<HTMLVideoElement>(null);
+
+          return (
             <div
               key={i}
-              className="h-64 px-2"
+              className="px-3"
               style={{ width: `${100 / extendedSlides.length}%` }}
             >
+              <div
+                className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative"
+                onMouseEnter={() => videoRef.current?.play()}
+                onMouseLeave={() => videoRef.current?.pause()}
+              >
+                <Link to="/projects">
+                  <div
+                    className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative"
+                    onMouseEnter={() => videoRef.current?.play()}
+                    onMouseLeave={() => videoRef.current?.pause()}
+                  >
+                    <video
+                      ref={videoRef}
+                      loop
+                      muted
+                      className="w-full h-48 object-cover hover:grayscale-0 grayscale transition duration-300"
+                    >
+                      <source src={project.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </Link>
+              </div>
 
-            <div
-              className={`h-full w-full rounded-xl flex items-center justify-center text-white text-2xl font-bold hover:bg-gray-400  ${slide.color}`}
-            >
-              {slide.text}
+              <h3 className="text-xl font-bold text-gray-900 flex items-center gap-1">
+                {project.title}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  ></a>
+                )}
+              </h3>
+              <p className="text-gray-600 mt-1">{project.desc}</p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

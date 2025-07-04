@@ -5,7 +5,7 @@ export interface Slide {
 }
 
 export const slides: Slide[] = [
-  { id: 1, text: "Roullet-game", color: "bg-gray-500" },
+  { id: 1, text: "Roullet-game", color: "bg-gray-500"},
   { id: 2, text: "Kiosk", color: "bg-gray-500" },
   { id: 3, text: "Smartbase", color: "bg-gray-500" },
   { id: 4, text: "Love-u-app", color: "bg-gray-500" },
