@@ -9,8 +9,8 @@ export default function App() {
             Hey, I'm Mark <span className="inline-block">👋</span>
           </p>
           <h1 className="text-5xl font-extrabold leading-tight">
-            <span className="text-purple-600">Front</span>
-            <span className="text-black">end</span>
+            <span className="text-purple-600">Full</span>
+            <span className="text-black">Stack</span>
             <br />
             <span className="text-black">WebDeveloper</span>
           </h1>

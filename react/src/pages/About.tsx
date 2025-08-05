@@ -132,8 +132,8 @@ export default function About() {
                     before:content-[''] before:left-0 before:h-full before:bg-purple-600 before:w-1 before:absolute before:top-0 relative before:rounded-full"
             >
               I am a passionate web development student who enjoys creating
-              proffesional, fast, and user-friendly websites. I am always open to learn
-              and take on new challenges that push me to grow as a
+              proffesional, fast, and user-friendly websites. I am always open
+              to learn and take on new challenges that push me to grow as a
               developer.
             </p>
           </div>
@@ -147,9 +147,9 @@ export default function About() {
           My Story<span className="text-purple-600">.</span>
         </h2>
         <p className="text-lg text-gray-700 mb-6">
-          My coding journey started when I discovered the beauty behind software development. It
-          sparked a passion in me, and since then I have been diving deeper into
-          front-end technologies like{" "}
+          My coding journey started when I discovered the beauty behind software
+          development. It sparked a passion in me, and since then I have been
+          diving deeper into front-end technologies like{" "}
           <span className="text-purple-600">HTML</span>,{" "}
           <span className="text-purple-600">CSS</span>,{" "}
           <span className="text-purple-600">JavaScript</span>, and{" "}
@@ -165,8 +165,8 @@ export default function About() {
           I also enjoy learning new tools and frameworks, such as{" "}
           <span className="text-purple-600">Tailwind CSS</span>,{" "}
           <span className="text-purple-600">Vite</span>, as well as{" "}
-          <span className="text-purple-600">Headless WordPress</span>, furthermore I
-          enjoy experimenting with animations and APIs.
+          <span className="text-purple-600">Headless WordPress</span>,
+          furthermore I enjoy experimenting with animations and APIs.
         </p>
         <p className="text-lg text-gray-700">
           I'm always open to feedback and collaboration and excited to continue
@@ -223,6 +223,22 @@ export default function About() {
             </p>
           </div>
         </div>
+
+        <div className="flex items-start space-x-4">
+          <span className="text-5xl font-bold text-gray-800">04</span>
+          <div>
+            <p className="text-purple-600 font-medium">School Project</p>
+            <h3 className="text-2xl font-extrabold text-gray-900">
+              CRUD-system
+            </h3>
+            <p className="text-gray-700">
+              A webshop with a CRUD system made with <strong>PHP</strong> and{" "}
+              <strong>Tailwind</strong>. I have created a webshop where you can
+              buy different lighters, you can also: create, read, update and
+              delete sertain products.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-16">
@@ -230,9 +246,8 @@ export default function About() {
           My Skills<span className="text-purple-600">.</span>
         </h2>
         <p className="text-lg text-gray-700 mb-6">
-          I sepecialize in{" "}
-          <span className="text-purple-600">React,</span>{" "}
-          but I also have experience with{" "}
+          I sepecialize in <span className="text-purple-600">React,</span> but I
+          also have experience with{" "}
           <span className="text-purple-600">HTML</span>,{" "}
           <span className="text-purple-600">CSS</span>,{" "}
           <span className="text-purple-600">JavaScript</span>,{" "}
@@ -244,7 +259,6 @@ export default function About() {
           <span className="text-purple-600">Svelte</span>,{" "}
           <span className="text-purple-600">WordPress</span>, and{" "}
           <span className="text-purple-600">Socket.IO</span>.
-        
         </p>
       </section>
     </main>
