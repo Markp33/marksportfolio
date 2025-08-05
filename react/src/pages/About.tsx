@@ -168,6 +168,14 @@ export default function About() {
           <span className="text-purple-600">Headless WordPress</span>,
           furthermore I enjoy experimenting with animations and APIs.
         </p>
+        <p className="text-lg text-gray-700 mb-6">
+          At the moment i go to school at the{" "}
+          <span className="text-purple-600">Grafisch Lyceum</span> in Utrecht.
+          In my free time, you will find me at the gym, spending time with my
+          girlfriend or find me working as a{" "}
+          <span className="text-purple-600">process coordinator</span> at
+          PostNL
+        </p>
         <p className="text-lg text-gray-700">
           I'm always open to feedback and collaboration and excited to continue
           improving my skills and one day turn my passion into a full-time job
@@ -208,7 +216,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex items-start space-x-4">
+        <div className="flex items-start space-x-4 mb-8">
           <span className="text-5xl font-bold text-gray-800">03</span>
           <div>
             <p className="text-purple-600 font-medium">School Project</p>
@@ -235,7 +243,7 @@ export default function About() {
               A webshop with a CRUD system made with <strong>PHP</strong> and{" "}
               <strong>Tailwind</strong>. I have created a webshop where you can
               buy different lighters, you can also: create, read, update and
-              delete sertain products.
+              delete sertain products as an admin.
             </p>
           </div>
         </div>
@@ -250,6 +258,7 @@ export default function About() {
           also have experience with{" "}
           <span className="text-purple-600">HTML</span>,{" "}
           <span className="text-purple-600">CSS</span>,{" "}
+          <span className="text-purple-600">PHP</span>,{" "}
           <span className="text-purple-600">JavaScript</span>,{" "}
           <span className="text-purple-600">Node.js</span>,{" "}
           <span className="text-purple-600">Express</span>,{" "}
