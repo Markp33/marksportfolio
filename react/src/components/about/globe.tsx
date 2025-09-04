@@ -1,14 +1,12 @@
-import createGlobe from "cobe";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
-export default function App() {
-  const canvasRef = useRef();
+export default function Globe() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  
-
-
-      <canvas
-        ref={canvasRef}
-        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
-      />
-
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: "1 / 1" }}
+    />
+  );
+}
