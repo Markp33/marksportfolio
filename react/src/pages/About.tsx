@@ -173,9 +173,16 @@ export default function About() {
           <span className="text-purple-600">Grafisch Lyceum</span> in Utrecht.
           In my free time, you will find me at the gym, spending time with my
           girlfriend or find me working as a{" "}
-          <span className="text-purple-600">process coordinator</span> at
-          PostNL
+          <span className="text-purple-600">process coordinator</span> at PostNL
         </p>
+        <p className="text-lg text-gray-700 mb-6">
+          In school projects I often take the lead when working in teams. I
+          enjoy organizing tasks, keeping the overview, and making sure everyone
+          can contribute their strengths. This has taught me how important clear
+          communication and collaboration are, and I try to bring that same
+          mindset to every project I work on.
+        </p>
+
         <p className="text-lg text-gray-700">
           I'm always open to feedback and collaboration and excited to continue
           improving my skills and one day turn my passion into a full-time job

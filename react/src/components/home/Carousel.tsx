@@ -2,26 +2,39 @@ import { useEffect, useRef, useState } from "react";
 import { projects } from "@/data/projects";
 import { Link } from "react-router-dom";
 
-
-const visibleSlides = 3;
-
 export default function Carousel() {
   const [index, setIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(true);
+  const [visibleSlides, setVisibleSlides] = useState(3);
   const trackRef = useRef<HTMLDivElement>(null);
 
   const totalSlides = projects.length;
   const extendedSlides = [...projects, ...projects];
 
+  // Dynamisch slides per view aanpassen
+  useEffect(() => {
+    function updateSlides() {
+      if (window.innerWidth < 768) {
+        setVisibleSlides(1);
+      } else {
+        setVisibleSlides(3);
+      }
+    }
+    updateSlides();
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
+  }, []);
+
+  // Auto scroll
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => prev + 1);
       setTransitioning(true);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
+  // Reset naar start (loop effect)
   useEffect(() => {
     if (index === totalSlides) {
       const timeout = setTimeout(() => {
@@ -46,27 +59,36 @@ export default function Carousel() {
         {extendedSlides.map((project, i) => {
           const videoRef = useRef<HTMLVideoElement>(null);
 
+          // check of device mobiel is
+          const isMobile = window.innerWidth < 768;
+
           return (
             <div
               key={i}
               className="px-3"
               style={{ width: `${100 / extendedSlides.length}%` }}
             >
-              <div
-                className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative"
-                onMouseEnter={() => videoRef.current?.play()}
-                onMouseLeave={() => videoRef.current?.pause()}
-              >
+              <div className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative">
                 <Link to="/projects">
                   <div
                     className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative"
-                    onMouseEnter={() => videoRef.current?.play()}
-                    onMouseLeave={() => videoRef.current?.pause()}
+                    onMouseEnter={() => !isMobile && videoRef.current?.play()}
+                    onMouseLeave={() => !isMobile && videoRef.current?.pause()}
+                    onClick={() => {
+                      if (isMobile && videoRef.current) {
+                        if (videoRef.current.paused) {
+                          videoRef.current.play();
+                        } else {
+                          videoRef.current.pause();
+                        }
+                      }
+                    }}
                   >
                     <video
                       ref={videoRef}
                       loop
                       muted
+                      playsInline
                       className="w-full h-48 object-cover hover:grayscale-0 grayscale transition duration-300"
                     >
                       <source src={project.video} type="video/mp4" />
