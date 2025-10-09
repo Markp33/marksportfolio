@@ -8,7 +8,7 @@ export default function App() {
           <p className="text-xl font-medium">
             Hey, I'm Mark <span className="inline-block">👋</span>
           </p>
-          <h1 className="text-5xl font-extrabold leading-tight">
+          <h1 className="text-5xl font-extrabold leading-tight animate-fadeIn">
             <span className="text-purple-600">Full</span>
             <span className="text-black">Stack</span>
             <br />
@@ -34,7 +34,7 @@ export default function App() {
         </div>
 
         <div className="mt-12 md:mt-0">
-          <div className="w-104 h-104 rounded-full border-2 border-purple-400 p-2">
+          <div className="w-104 h-104 rounded-full border-2 border-purple-400 p-2 animate-float">
             <img
               src="/img/me.jpg"
               alt="Mark"

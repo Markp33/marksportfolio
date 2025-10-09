@@ -1,7 +1,10 @@
-import { FaInstagram, FaLinkedin, FaGithub,} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <footer className="bg-white py-12 px-6 md:px-16">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
@@ -10,17 +13,24 @@ const Footer = () => {
             Interested in working together<span className="text-purple-600">?</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="/contact">
-              <button className="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
-                Get In Touch
-              </button>
-            </a>
-
-            <a href="/projects">
-              <button className="border-2 border-black px-6 py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition">
-                Browse Projects
-              </button>
-            </a>
+            <Link
+              to="/Contact"
+              className={
+                "bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition text-center " +
+                (location.pathname === "/Contact" ? "ring-2 ring-purple-400" : "")
+              }
+            >
+              Get In Touch
+            </Link>
+            <Link
+              to="/Projects"
+              className={
+                "border-2 border-black px-6 py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition text-center " +
+                (location.pathname === "/Projects" ? "bg-black text-white" : "text-black")
+              }
+            >
+              Browse Projects
+            </Link>
           </div>
         </div>
 

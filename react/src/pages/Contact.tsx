@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -8,7 +8,8 @@ const ContactSection = () => {
           Get In Touch<span className="text-purple-600">.</span>
         </h2>
         <p className="text-lg text-gray-600 mt-6">
-          Looking to partner or work together? Reach out through the form and I'll get back to you in the next 48 hours.
+          Looking to partner or work together? Reach out through the form and
+          I'll get back to you in the next 48 hours.
         </p>
 
         <div className="mt-10 space-y-6">
@@ -28,15 +29,15 @@ const ContactSection = () => {
         </div>
       </div>
 
-        <div className="mt-12 md:mt-0">
-          <div className="w-104 h-104 rounded-full border-2 border-purple-400 p-2">
-            <img
-              src="/img/me.jpg"
-              alt="Mark"
-              className="w-full h-full object-cover rounded-full drag-none"
-            />
-          </div>
+      <div className="mt-12 md:mt-0">
+        <div className="w-104 h-104 rounded-full border-2 border-purple-400 p-2 animate-float">
+          <img
+            src="/img/me.jpg"
+            alt="Mark"
+            className="w-full h-full object-cover rounded-full drag-none"
+          />
         </div>
+      </div>
     </section>
   );
 };

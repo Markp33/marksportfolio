@@ -185,8 +185,7 @@ export default function About() {
 
         <p className="text-lg text-gray-700">
           I'm always open to feedback and collaboration and excited to continue
-          improving my skills and one day turn my passion into a full-time job
-          💜
+          improving my skills and one day turn my passion into a full-time job.
         </p>
       </section>
       <section className="max-w-4xl mx-auto px-4 py-16">

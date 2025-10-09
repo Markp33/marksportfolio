@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { projects } from "@/data/projects";
+import { schoolProjects, ownProjects, clientProjects } from "@/data/projects";
 import { Link } from "react-router-dom";
 
 export default function Carousel() {
@@ -8,8 +8,10 @@ export default function Carousel() {
   const [visibleSlides, setVisibleSlides] = useState(3);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const totalSlides = projects.length;
-  const extendedSlides = [...projects, ...projects];
+  // merge all projects into one carousel
+  const allProjects = [...schoolProjects, ...ownProjects, ...clientProjects];
+  const totalSlides = allProjects.length;
+  const extendedSlides = [...allProjects, ...allProjects];
 
   // Dynamisch slides per view aanpassen
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function Carousel() {
       }, 700);
       return () => clearTimeout(timeout);
     }
-  }, [index]);
+  }, [index, totalSlides]);
 
   return (
     <div className="w-full max-w-6xl mx-auto overflow-hidden py-6">
@@ -58,8 +60,6 @@ export default function Carousel() {
       >
         {extendedSlides.map((project, i) => {
           const videoRef = useRef<HTMLVideoElement>(null);
-
-          // check of device mobiel is
           const isMobile = window.innerWidth < 768;
 
           return (
@@ -105,7 +105,9 @@ export default function Carousel() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                  ></a>
+                  >
+                    {/* You can drop in an icon here if you want */}
+                  </a>
                 )}
               </h3>
               <p className="text-gray-600 mt-1">{project.desc}</p>
