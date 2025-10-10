@@ -7,7 +7,7 @@ export default function Projects() {
   const [openIndex, setOpenIndex] = useState<string | null>(null);
 
   const renderProjects = (projects: any[], category: string) => (
-    <div className="mb-16">
+    <div className="mb-26">
       <h3 className="text-2xl font-semibold text-gray-900 mb-8">
         {category}<span className="text-purple-600">.</span>
       </h3>
@@ -17,7 +17,7 @@ export default function Projects() {
           return (
             <div
               key={uniqueIndex}
-              className="relative min-h-[370px] mb-20"
+              className="relative min-h-[370px] my-24"
             >
               <div
                 className="bg-gray-300 rounded-3xl overflow-hidden mb-4 relative"
@@ -42,7 +42,7 @@ export default function Projects() {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="flex items-center gap-1 mb-2">
+              <div className="flex items-center gap-1">
                 <h4 className="text-xl font-bold text-gray-900 flex items-center">
                   {project.title}
                 </h4>
