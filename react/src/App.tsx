@@ -10,6 +10,9 @@ import "@/styles/index.css";
 export default function App() {
   return (
     <BrowserRouter>
+      <head>
+        <title>Mark Petrenko's portfolio</title>
+      </head>
       <Header />
       <main>
         <Routes>
@@ -18,7 +21,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </main>    
+      </main>
       <Footer />
     </BrowserRouter>
   );
