@@ -9,5 +9,6 @@ export interface Project {
   desc: string;
   tech: string[]
   link: string;
+  gitlink: string;
   video: string;
 }

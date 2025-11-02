@@ -8,12 +8,10 @@ export default function Carousel() {
   const [visibleSlides, setVisibleSlides] = useState(3);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // merge all projects into one carousel
   const allProjects = [...schoolProjects, ...ownProjects, ...clientProjects];
   const totalSlides = allProjects.length;
   const extendedSlides = [...allProjects, ...allProjects];
 
-  // Dynamisch slides per view aanpassen
   useEffect(() => {
     function updateSlides() {
       if (window.innerWidth < 768) {
@@ -36,7 +34,6 @@ export default function Carousel() {
     return () => clearInterval(interval);
   }, []);
 
-  // Reset naar start (loop effect)
   useEffect(() => {
     if (index === totalSlides) {
       const timeout = setTimeout(() => {
@@ -106,11 +103,9 @@ export default function Carousel() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {/* You can drop in an icon here if you want */}
                   </a>
                 )}
               </h3>
-              <p className="text-gray-600 mt-1">{project.desc}</p>
             </div>
           );
         })}

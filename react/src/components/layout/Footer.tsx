@@ -36,9 +36,9 @@ const Footer = () => {
 
         <div className="flex flex-col items-center md:items-end gap-4 text-center md:text-right">
           <div className="flex gap-4 text-gray-800 text-xl">
-            <a href="https://www.instagram.com/markpetrrnk/" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/mark-petrenko-3671a4373/" aria-label="LinkedIn"><FaLinkedin /></a>
-            <a href="https://github.com/Markp33" aria-label="GitHub"><FaGithub /></a>
+            <a href="https://www.instagram.com/markpetrrnk/" aria-label="Instagram" target="_blank" ><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/mark-petrenko-3671a4373/" aria-label="LinkedIn" target="_blank" ><FaLinkedin /></a>
+            <a href="https://github.com/Markp33" aria-label="GitHub" target="_blank" ><FaGithub /></a>
             <a
               href="/CV.pdf"
               aria-label="CV"
