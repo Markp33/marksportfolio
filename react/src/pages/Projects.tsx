@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { schoolProjects, ownProjects, clientProjects } from "@/data/projects";
 import { useRef } from "react";
 
@@ -61,7 +62,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="ml-2"
                   >
-                    <ExternalLink className="w-4 h-4 text-purple-600" />
+                    <FaGithub className="w-4 h-4 text-purple-600" />
                   </a>
                 )}
               </div>

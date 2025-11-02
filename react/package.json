@@ -12,7 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
     "cobe": "^0.6.4",
-    "framer-motion": "^12.18.1",
+    "framer-motion": "^12.23.24",
     "lib-utils-ts": "^0.0.0-test",
     "lucide-react": "^0.523.0",
     "motion": "^12.20.2",
