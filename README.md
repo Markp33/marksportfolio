@@ -60,7 +60,7 @@ cd react && bun i && bun run dev
 
 ## Author(s)
 
-- **Twan Asselbergs** - [TwanAsselbergs](https://github.com/TwanAsselbergs)
+- **Mark Petrenko** - [Markp33](https://github.com/Markp33)
 
 ## License
 
